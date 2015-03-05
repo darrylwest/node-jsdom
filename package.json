@@ -1,18 +1,19 @@
 {
-  "name": "jsdom",
+  "name": "node-jsdom",
   "version": "3.1.2",
-  "description": "A JavaScript implementation of the DOM and HTML standards",
+  "description": "A JavaScript implementation of the DOM and HTML standards cloned from the original jsdom branch 3.x",
   "keywords": [
     "dom",
     "html",
     "whatwg",
-    "w3c"
+    "w3c",
+    "node-jsdom"
   ],
   "maintainers": [
     "<darryl.west@raincitysoftware.com>"
   ],
   "contributors": [
-    "Darryl West <darryl.west@raincitysoftware.com>"
+    "Darryl West <darryl.west@raincitysoftware.com>",
     "Vincent Greene <ulteriorlife@gmail.com>",
     "Dav Glass <davglass@gmail.com>",
     "Felix Gnass <fgnass@gmail.com>",
@@ -51,9 +52,12 @@
   ],
   "license": {
     "type": "MIT",
-    "url": "http://github.com/tmpvar/jsdom/blob/master/LICENSE.txt"
+    "url": "https://github.com/darrylwest/node-jsdom/LICENSE.txt"
   },
-  "repository": "tmpvar/jsdom",
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/darrylwest/node-jsdom.git"
+  },
   "dependencies": {
     "browser-request": ">= 0.3.1 < 0.4.0",
     "contextify": ">= 0.1.9 < 0.2.0",
