@@ -1,6 +1,9 @@
-# jsdom 3.x branch
+# node-jsdom
+- - -
 
-**The jsdom 3.x series is the last release of jsdom that works with Node.js, instead of requiring [io.js](https://iojs.org/). It is no longer maintained by the maintainers, but you are welcome to use it as the starting point for your own fork which you publish under another name. If you do so, we'll be happy to link to your fork here.**
+_First a note from the original jsdom project..._
+
+_The jsdom 3.x series is the last release of jsdom that works with Node.js, instead of requiring [io.js](https://iojs.org/). It is no longer maintained by the maintainers, but you are welcome to use it as the starting point for your own fork which you publish under another name. If you do so, we'll be happy to link to your fork here._
 
 A JavaScript implementation of the WHATWG DOM and HTML standards.
 
@@ -11,10 +14,6 @@ $ npm install jsdom
 ```
 
 If this gives you trouble with errors about installing Contextify, especially on Windows, see [below](#contextify).
-
-## Human contact
-
-see: [mailing list](http://groups.google.com/group/jsdom)
 
 ## Easymode: `jsdom.env`
 
