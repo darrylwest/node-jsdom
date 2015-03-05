@@ -94,6 +94,3 @@ Options:
   --verbose-browser-console  print browser console to stdout
 ```
 
-## Issues
-
-Finally, we have [an active and full issue tracker](https://github.com/tmpvar/jsdom/issues) that we'd love you to help with. Go find something broken, and fix it!
