@@ -10,7 +10,7 @@ A JavaScript implementation of the WHATWG DOM and HTML standards.
 ## Install
 
 ```bash
-$ npm install jsdom
+$ npm install node-jsdom
 ```
 
 If this gives you trouble with errors about installing Contextify, especially on Windows, see [below](#contextify).
@@ -23,7 +23,7 @@ You can use it with a URL
 
 ```js
 // Count all of the links from the Node.js build page
-var jsdom = require("jsdom");
+var jsdom = require("node-jsdom");
 
 jsdom.env(
   "http://nodejs.org/dist/",
@@ -38,7 +38,7 @@ or with raw HTML
 
 ```js
 // Run some jQuery on a html fragment
-var jsdom = require("jsdom");
+var jsdom = require("node-jsdom");
 
 jsdom.env(
   '<p><a class="the-link" href="https://github.com/tmpvar/jsdom">jsdom!</a></p>',
@@ -53,7 +53,7 @@ or with a configuration object
 
 ```js
 // Print all of the news items on Hacker News
-var jsdom = require("jsdom");
+var jsdom = require("node-jsdom");
 
 jsdom.env({
   url: "http://news.ycombinator.com/",
@@ -72,7 +72,7 @@ or with raw JavaScript source
 
 ```js
 // Print all of the news items on Hacker News
-var jsdom = require("jsdom");
+var jsdom = require("node-jsdom");
 var fs = require("fs");
 var jquery = fs.readFileSync("./jquery.js", "utf-8");
 
@@ -205,7 +205,7 @@ The `jsdom.jsdom` method does fewer things automatically; it takes in only HTML 
 Usage of the API generally looks like this:
 
 ```js
-var jsdom = require("jsdom").jsdom;
+var jsdom = require("node-jsdom").jsdom;
 var doc = jsdom(markup, options);
 var window = doc.parentWindow;
 ```
@@ -221,7 +221,7 @@ One of the goals of jsdom is to be as minimal and light as possible. This sectio
 1. When you create a new `Document`, by overriding the configuration:
 
   ```js
-  var jsdom = require("jsdom").jsdom;
+  var jsdom = require("node-jsdom").jsdom;
   var doc = jsdom("<html><body></body></html>", {
       features: {
         FetchExternalResources : ["img"]
@@ -234,7 +234,7 @@ One of the goals of jsdom is to be as minimal and light as possible. This sectio
 2. Before creating any documents, you can modify the defaults for all future documents:
 
   ```js
-  require("jsdom").defaultDocumentFeatures = {
+  require("node-jsdom").defaultDocumentFeatures = {
       FetchExternalResources: ["script"],
       ProcessExternalResources: false
   };
@@ -285,7 +285,7 @@ jsdom lets you intercept subresource requests using `config.resourceLoader`. `co
 For example, fetching all JS files from a different directory and running them in strict mode:
 
 ```js
-var jsdom = require("jsdom");
+var jsdom = require("node-jsdom");
 
 jsdom.env({
   url: "http://example.com/",
@@ -318,7 +318,7 @@ jsdom includes support for using the [canvas](https://npmjs.org/package/canvas) 
 ### Creating a browser-like window object
 
 ```js
-var jsdom = require("jsdom").jsdom;
+var jsdom = require("node-jsdom").jsdom;
 var document = jsdom("hello world");
 var window = document.parentWindow;
 
@@ -335,7 +335,7 @@ console.log(typeof window.document.getElementsByClassName);
 ### jQueryify
 
 ```js
-var jsdom = require("jsdom");
+var jsdom = require("node-jsdom");
 var window = jsdom.jsdom().parentWindow;
 
 jsdom.jQueryify(window, "http://code.jquery.com/jquery-2.1.1.js", function () {
@@ -348,7 +348,7 @@ jsdom.jQueryify(window, "http://code.jquery.com/jquery-2.1.1.js", function () {
 ### Passing objects to scripts inside the page
 
 ```js
-var jsdom = require("jsdom").jsdom;
+var jsdom = require("node-jsdom").jsdom;
 var window = jsdom().parentWindow;
 
 window.__myObject = { foo: "bar" };
@@ -364,8 +364,8 @@ window.document.body.appendChild(scriptEl);
 ### Serializing a document
 
 ```js
-var jsdom = require("jsdom").jsdom;
-var serializeDocument = require("jsdom").serializeDocument;
+var jsdom = require("node-jsdom").jsdom;
+var serializeDocument = require("node-jsdom").serializeDocument;
 
 var doc = jsdom("<!DOCTYPE html>hello");
 
@@ -378,7 +378,7 @@ doc.documentElement.outerHTML === "<html><head></head><body>hello</body></html>"
 #### Forward a window's console output to the Node.js console
 
 ```js
-var jsdom = require("jsdom");
+var jsdom = require("node-jsdom");
 var window = jsdom.jsdom().parentWindow;
 
 jsdom.getVirtualConsole(window).sendTo(console);
@@ -387,7 +387,7 @@ jsdom.getVirtualConsole(window).sendTo(console);
 #### Get an event emitter for a window's console
 
 ```js
-var jsdom = require("jsdom");
+var jsdom = require("node-jsdom");
 var window = jsdom.jsdom().parentWindow;
 
 var virtualConsole = jsdom.getVirtualConsole(window);
