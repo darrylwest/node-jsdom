@@ -7,7 +7,7 @@
     "html",
     "whatwg",
     "w3c",
-    "node-jsdom"
+    "jsdom"
   ],
   "maintainers": [
     "<darryl.west@raincitysoftware.com>"
@@ -98,6 +98,7 @@
     "test-browser": "node ./test/browser-runner",
     "lint": "jshint lib/ && jshint test/"
   },
+  "homepage":"https://github.com/darrylwest/node-jsdom",
   "main": "./lib/jsdom",
   "files": [
     "lib/"
