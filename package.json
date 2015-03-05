@@ -9,11 +9,10 @@
     "w3c"
   ],
   "maintainers": [
-    "Elijah Insua <tmpvar@gmail.com> (http://tmpvar.com)",
-    "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
-    "Sebastian Mayr <sebmaster16@gmail.com> (http://blog.smayr.name/)"
+    "<darryl.west@raincitysoftware.com>"
   ],
   "contributors": [
+    "Darryl West <darryl.west@raincitysoftware.com>"
     "Vincent Greene <ulteriorlife@gmail.com>",
     "Dav Glass <davglass@gmail.com>",
     "Felix Gnass <fgnass@gmail.com>",
